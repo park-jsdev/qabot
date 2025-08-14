@@ -196,7 +196,7 @@ def metadata_search(entity_values, vectorstore):
     hits = []
     for doc in all_docs:
         found = False
-        for field in ["dates", "names", "underlined"]:
+        for field in ["dates", "names", "records", "underlined"]:
             meta_values = doc.metadata.get(field, [])
             if isinstance(meta_values, str):
                 meta_values = [meta_values]
