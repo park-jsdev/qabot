@@ -34,6 +34,12 @@ A minimal Retrieval-Augmented Generation (RAG) system for document-based questio
    ```
    The API will be available at [http://localhost:8000](http://localhost:8000).
 
+3. **Check server health:**
+   ```bash
+   curl http://localhost:8000/api/health
+   ```
+   Should return a JSON status payload.
+
 ---
 
 ## Frontend Setup (Next.js Dashboard)

@@ -40,6 +40,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.get("/api/health")
+async def health_check() -> Dict[str, str]:
+    """Simple health check endpoint."""
+    return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
 # Models
 class Message(BaseModel):
     role: str
